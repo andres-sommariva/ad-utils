@@ -12,3 +12,12 @@ alias vmhalt="cdad;vagrant halt dev"
 alias srvup="cdapp;mvn tomcat7:run"
 alias srvupdebug="cdapp;mvnDebug tomcat7:run"
 alias allup="vpn;vmup;srvup"
+
+# Git: Download latest changes from master and update my own origin
+alias gitmergeupstream='cdad;git fetch upstream; git merge upstream/master;git push origin master'
+
+# Front-end: Hotload CSS Changes
+alias hotloadcss='cdapp;cd appdirect/;gulp build:css watch:css'
+
+# Front-end: Hotload Javascript changes
+alias hotloadjs='cdapp;cd appdirect/;gulp watch:legacy'
