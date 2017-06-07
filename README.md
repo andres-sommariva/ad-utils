@@ -17,4 +17,6 @@ Alias:
 * 'mcits': Maven clean install skipping tests.
 * 'vmup': Start vagrant machine.
 * 'vmhalt': Stop vagrant machine.
+* 'dkrstart': Start docker containers (use after first run)
+* 'dkrstop': Stop docker containers
 * 'vpn': Connects to the VPN. Requires 'OpenConnect'.

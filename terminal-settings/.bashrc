@@ -12,3 +12,6 @@ alias vmhalt="cdad;vagrant halt dev"
 alias srvup="cdapp;mvn tomcat7:run"
 alias srvupdebug="cdapp;mvnDebug tomcat7:run"
 alias allup="vpn;vmup;srvup"
+
+alias dkrstart="docker start appdirectdb memcached rabbitmq db jbilling"
+alias dkrstop="docker stop appdirectdb memcached rabbitmq db jbilling"
