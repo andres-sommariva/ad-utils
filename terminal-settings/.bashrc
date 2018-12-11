@@ -4,11 +4,9 @@ alias cdapp="cd ~/_code/git/AppDirect/AppDirect/appdirect-parent/"
 alias mipl="cdapp;mvn install -pl '!appdirect' -Dmaven.test.skip=true -DskipTests=true"
 alias mcits="cdapp;mvn clean install -Dmaven.test.skip=true -DskipTests=true"
 
-alias vpn='echo -n [user.password] | sudo openconnect --user=[user.name] --passwd-on-stdin --authgroup=Employee batman.appdirect.com'
-alias vpni='echo -n [user.password] | sudo openconnect --user=[user.name] --passwd-on-stdin --authgroup=Employee iceman.appdirect.com'
+alias vpn='echo -e "[user.password]\npush" | sudo openconnect --user=[user.name] --passwd-on-stdin --authgroup=Duo batman.appdirect.com'
+alias vpni='echo -e "[user.password]\npush" | sudo openconnect --user=[user.name] --passwd-on-stdin --authgroup=Duo iceman.appdirect.com'
 
-alias vmup="cdad;vagrant up dev"
-alias vmhalt="cdad;vagrant halt dev"
 alias srvup="cdapp;mvn tomcat7:run"
 alias srvupdebug="cdapp;mvnDebug tomcat7:run"
 alias allup="vpn;vmup;srvup"
